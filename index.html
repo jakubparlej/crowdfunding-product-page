@@ -7,7 +7,7 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./scss/main.scss">
+  <link rel="stylesheet" href="./css/main.css">
 
   <title>Frontend Mentor | Crowdfunding product page</title>
 
@@ -27,10 +27,11 @@
 <body>
 
   <header class="header">
-    <div class="container">
+    <div class="header__container">
       <div class="logo">
         <img src="./images/logo.svg" alt="crowdfund" class="logo__img">
       </div>
+      <div class="menu-btn"></div>
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item"><a href="#" class="nav__link">About</a></li>
@@ -42,9 +43,9 @@
   </header>
 
   <main class="main">
-    <section class="hero">
-      <h1 class="hero__title">Mastercraft Bamboo Monitor Riser</h1>
-      <p class="hero__desc">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
+    <section class="section hero">
+      <h1>Mastercraft Bamboo Monitor Riser</h1>
+      <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
       <a class="btn">Back this project</a>
 
       <div class="bookmark">
@@ -52,12 +53,23 @@
         <div class="bookmark__label">Bookmark</div>
       </div>
     </section>
+
+    <section class="section stats">
+      <div class="stats__item">
+        <h2>$89,914</h2>
+        <p>of $100,000 backed</p>
+      </div>
+      <div class="stats__item">
+        <h2>5,007</h2>
+        <p>total backers</p>
+      </div>
+      <div class="stats__item">
+        <h2>56</h2>
+        <p>days left</p>
+      </div>
+      <div class="stats__bar"></div>
+    </section>
   </main>
-
-  $89,914 of $100,000 backed
-  5,007 total backers
-  56 days left
-
   About this project
 
   The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen
