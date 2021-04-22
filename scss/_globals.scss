@@ -6,6 +6,19 @@ $darkGray: hsl(0, 0, 48%);
 $black: hsl(0, 0, 0);
 $veryLightGray: #FAFAFA;
 
+// Mixins
+
+$breakpoints: (tablet: (min-width: 768px),
+  desktop: (min-width: 1024px));
+
+@mixin media($breakpoint) {
+  $size: map-get($breakpoints, $breakpoint);
+
+  @media #{$size} {
+    @content
+  }
+}
+
 :root {
   font-size: 16px;
 }
@@ -21,32 +34,26 @@ body {
   font-family: 'Commissioner', Arial, Helvetica, sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .btn {
-  padding: 0 2rem;
+  padding: 1.625rem 2rem;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 3.4375rem;
   color: white;
   background-color: $moderateCyan;
   border-radius: 5rem;
   transition: background-color .3s ease-in-out;
   cursor: pointer;
 
+  &--disable {
+    background-color: $darkGray;
+  }
+
   &:hover {
     background-color: $darkCyan;
-  }
-}
-
-// Mixins
-
-$breakpoints: (tablet: (min-width: 768px),
-  desktop: (min-width: 1024px));
-
-@mixin media($breakpoint) {
-  $size: map-get($breakpoints, $breakpoint);
-
-  @media #{$size} {
-    @content
   }
 }
 
