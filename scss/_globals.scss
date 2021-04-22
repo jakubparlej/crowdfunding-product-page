@@ -4,14 +4,70 @@ $moderateCyan: hsl(176, 50%, 47%);
 $darkCyan: hsl(176, 72, 28%);
 $darkGray: hsl(0, 0, 48%);
 $black: hsl(0, 0, 0);
+$veryLightGray: #FAFAFA;
 
 :root {
   font-size: 16px;
 }
 
 body {
+  background-color: $veryLightGray;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Commissioner', Arial, Helvetica, sans-serif;
+}
+
+.btn {
+  padding: 0 3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 3.4375rem;
+  color: white;
+  background-color: $moderateCyan;
+  border-radius: 5rem;
+  transition: background-color .3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $darkCyan;
+  }
+}
+
+// Mixins
+
+$breakpoints: (tablet: (min-width: 768px),
+  desktop: (min-width: 1024px));
+
+@mixin media($breakpoint) {
+  $size: map-get($breakpoints, $breakpoint);
+
+  @media #{$size} {
+    @content
+  }
+}
+
+.section {
+  max-width: 45.625rem;
+  height: 16.75rem;
+  margin: -3.5rem 1.5rem 1.5rem 1.5rem;
+  padding: 0 1.5rem 2.5rem 1.5rem;
+  border-radius: 0.625rem;
+  background-color: #FFF;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+
+  @include media(tablet) {
+    margin: -7.375rem auto 0 auto;
+    padding-bottom: 3rem;
+  }
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

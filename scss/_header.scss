@@ -4,6 +4,11 @@
   background: url(../images/image-hero-mobile.jpg);
   padding-top: 2rem;
 
+  @include media(tablet) {
+    background: url(../images/image-hero-desktop.jpg);
+    background-size: cover;
+  }
+
   &__container {
     max-width: 69rem;
     padding: 0 1.5rem;

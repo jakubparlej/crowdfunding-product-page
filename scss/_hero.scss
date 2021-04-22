@@ -1,0 +1,61 @@
+.hero {
+
+  @include media(tablet) {
+    margin-top: -7.375rem;
+  }
+
+  &__img {
+    transform: translateY(-50%);
+  }
+
+  h1 {
+    padding: 0 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    color: $darkGray;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
+.bookmark {
+  cursor: pointer;
+  transition: opacity .3s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @include media(tablet) {
+    display: flex;
+
+  }
+
+  &__icon {
+    z-index: 1;
+  }
+
+
+
+  &__label {
+    display: none;
+
+    @include media(tablet) {
+      display: block;
+      background-color: #F4F4F4;
+      padding: 1rem 1.5rem 1rem 3rem;
+      border-top-right-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+      margin-left: -1.5rem;
+
+    }
+  }
+}
