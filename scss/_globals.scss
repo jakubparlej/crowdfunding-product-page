@@ -22,7 +22,7 @@ body {
 }
 
 .btn {
-  padding: 0 3rem;
+  padding: 0 2rem;
   font-size: 1rem;
   font-weight: 500;
   line-height: 3.4375rem;
@@ -51,9 +51,7 @@ $breakpoints: (tablet: (min-width: 768px),
 }
 
 .section {
-  max-width: 45.625rem;
-  height: 16.75rem;
-  margin: -3.5rem 1.5rem 1.5rem 1.5rem;
+  margin: -3.5rem 1.5rem 0 1.5rem;
   padding: 0 1.5rem 2.5rem 1.5rem;
   border-radius: 0.625rem;
   background-color: #FFF;
@@ -61,6 +59,7 @@ $breakpoints: (tablet: (min-width: 768px),
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
 
   @include media(tablet) {
+    width: 45.625rem;
     margin: -7.375rem auto 0 auto;
     padding-bottom: 3rem;
   }
@@ -70,4 +69,25 @@ main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+
+  @include media(tablet) {
+    margin-bottom: 1.625rem;
+    font-size: 1.625rem;
+  }
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: $darkGray;
+  font-size: 0.875rem;
+
+  @include media(tablet) {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
 }

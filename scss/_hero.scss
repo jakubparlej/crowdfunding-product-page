@@ -2,20 +2,12 @@
 
   @include media(tablet) {
     margin-top: -7.375rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   &__img {
     transform: translateY(-50%);
-  }
-
-  h1 {
-    padding: 0 2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  p {
-    margin-bottom: 1.5rem;
-    color: $darkGray;
   }
 
   &__buttons {
@@ -23,6 +15,10 @@
     justify-content: center;
     gap: 1rem;
     align-items: center;
+
+    @include media(tablet) {
+      justify-content: space-between;
+    }
   }
 }
 
