@@ -61,7 +61,9 @@ $breakpoints: (tablet: (min-width: 768px),
   @include media(tablet) {
     width: 45.625rem;
     margin: -7.375rem auto 0 auto;
-    padding-bottom: 3rem;
+    padding-bottom: 2.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
