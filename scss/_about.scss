@@ -19,9 +19,10 @@
   border-radius: .5rem;
   padding: 1.625rem 1.5rem;
   margin-bottom: 1.5rem;
+  transition: border .2s ease-in-out;
 
-  @include media(tablet) {
-    min-height: 15rem;
+  &:hover {
+    border: 1px solid $darkCyan;
   }
 
   &--disable {
@@ -82,6 +83,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+
+    &--disable {
+      display: none;
     }
 
     p {

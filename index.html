@@ -139,10 +139,10 @@
     </header>
     <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
 
-    <div class="option" id="noReward">
+    <div class="option modal-option" id="noReward">
       <div class="option__header">
         <div class="option__circle">
-          <div class="option__circle--active"></div>
+          <div class="option__circle"></div>
         </div>
         <div class="option__title">
           <h3>Pledge with no reward</h3>
@@ -152,9 +152,9 @@
         Choose to support us without a reward if you simply believe in our project. As a backer,
         you will be signed up to receive product updates via email.
       </p>
-      <div class="option__footer">
+      <div class="option__footer--disable">
         <p class="option__left">101 <span>left</span></p>
-        <input class="btn" type="submit" value="Continue"></input>
+        <button class="btn" type="submit">Continue</button>
       </div>
     </div>
 
@@ -181,12 +181,12 @@
             <div>$</div>
             <input type="number" id="amount" number="amount" min="25" placeholder="25">
           </label>
-          <input class="btn" type="submit" value="Continue"></input>
+          <button class="btn" type="submit" id="continue">Continue</button>
         </form>
       </div>
     </div>
 
-    <div class="option">
+    <div class="option modal-option">
       <div class="option__header">
         <div class="option__circle"></div>
         <div class="option__title">
@@ -198,7 +198,7 @@
         You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
         member list. Shipping is included.
       </p>
-      <div class="option__footer">
+      <div class="option__footer--disable">
         <p class="option__left">64 <span>left</span></p>
         <p>Enter your pledge</p>
         <form action="">
@@ -206,7 +206,7 @@
             <div>$</div>
             <input type="number" id="amount" number="amount" min="75" placeholder="75">
           </label>
-          <input class="btn" type="submit" value="Continue"></input>
+          <button class="btn" type="submit">Continue</button>
         </form>
       </div>
     </div>
@@ -223,18 +223,18 @@
         You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
         to our Backer member list. Shipping is included.
       </p>
-      <p class="option__left">0 <span>left</span></p>
     </div>
   </section>
-  <div class="modal-overlay"></div>
+  <div class="modal__overlay"></div>
 
   <section class="modal-end">
     <img src="./images/icon-check.svg" alt="">
     <h2>Thanks for your support!</h2>
     <p>Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
       an email once our campaign is completed.</p>
-    <button id="btn">Got it!</button>
+    <button class="btn" id="closeEndBtn">Got it!</button>
   </section>
+  <div class="modal-end__overlay"></div>
 
   <script src="./scripts/main.js"></script>
 </body>
