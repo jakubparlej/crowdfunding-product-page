@@ -8,6 +8,9 @@ const continueBtn = document.querySelector('#continue');
 const bookmark = document.querySelector('.bookmark');
 const bookmarkIcon = document.querySelector('.bookmark__icon');
 const bookmarkLabel = document.querySelector('.bookmark__label');
+const menuBtn = document.querySelector('.menu-btn');
+const nav = document.querySelector('.nav');
+const navOverlay = document.querySelector('.nav__overlay');
 
 function openModal() {
   modal.classList.add('modal--active');
@@ -37,4 +40,10 @@ closeEndBtn.addEventListener('click', () => {
 bookmark.addEventListener('click', () => {
   bookmarkIcon.classList.toggle('bookmark__icon--active');
   bookmarkLabel.classList.toggle('bookmark__label--active');
+})
+
+menuBtn.addEventListener('click', () => {
+  nav.classList.toggle('nav--active');
+  navOverlay.classList.toggle('nav__overlay--active');
+  menuBtn.classList.toggle('menu-btn--active');
 })
