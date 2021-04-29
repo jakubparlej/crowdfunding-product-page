@@ -5,6 +5,7 @@ const modalOverlay = document.querySelector('.modal__overlay')
 const closeBtn = document.querySelector('#closeBtn');
 const closeEndBtn = document.querySelector('#closeEndBtn');
 const continueBtn = document.querySelector('#continue');
+const selectBtns = document.querySelectorAll('#select');
 const bookmark = document.querySelector('.bookmark');
 const bookmarkIcon = document.querySelector('.bookmark__icon');
 const bookmarkLabel = document.querySelector('.bookmark__label');
@@ -26,11 +27,16 @@ function closeModal() {
 btn.addEventListener('click', openModal);
 closeBtn.addEventListener('click', closeModal);
 modalOverlay.addEventListener('click', closeModal);
+selectBtns.forEach(btn => {
+  btn.addEventListener('click', openModal);
+})
 
 continueBtn.addEventListener('click', () => {
   modalEnd.classList.add('modal-end--active');
   modal.classList.remove('modal--active');
 })
+
+
 
 closeEndBtn.addEventListener('click', () => {
   modalEnd.classList.remove('modal-end--active');

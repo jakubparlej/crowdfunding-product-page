@@ -104,11 +104,11 @@
         </p>
         <div class="option__footer">
           <p class="option__left">101 <span>left</span></p>
-          <a class="btn btn--small" href="#">Select reward</a>
+          <a class="btn btn--small" id="select" href="#">Select reward</a>
         </div>
       </div>
 
-      <div class="option">
+      <div class="option" id="option2">
         <div class="option__title">
           <h3>Black Edition Stand</h3>
           <h4>Pledge $75 or more</h4>
@@ -119,7 +119,7 @@
         </p>
         <div class="option__footer">
           <p class="option__left">64 <span>left</span></p>
-          <a class="btn btn--small" href="#">Select reward</a>
+          <a class="btn btn--small" id="select" href="#">Select reward</a>
         </div>
       </div>
 
@@ -134,7 +134,7 @@
         </p>
         <div class="option__footer">
           <p class="option__left">0 <span>left</span></p>
-          <a class="btn btn--disable btn--small" href="#">Out of Stock</a>
+          <a class="btn btn--disable btn--small" id="select" href="#">Out of Stock</a>
         </div>
       </div>
     </section>
@@ -147,10 +147,10 @@
     </header>
     <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
 
-    <div class="option modal-option" id="noReward">
+    <div class="option modal-option" id="option1-modal">
       <div class="option__header">
         <div class="option__circle">
-          <div class="option__circle"></div>
+          <div class="option__circle" id="circle1"></div>
         </div>
         <div class="option__title">
           <h3>Pledge with no reward</h3>
@@ -160,16 +160,16 @@
         Choose to support us without a reward if you simply believe in our project. As a backer,
         you will be signed up to receive product updates via email.
       </p>
-      <div class="option__footer--disable">
+      <div class="option__footer option__footer--disable" id="option1-footer">
         <p class="option__left">101 <span>left</span></p>
         <button class="btn" type="submit">Continue</button>
       </div>
     </div>
 
-    <div class="option option--active">
+    <div class="option option--active" id="option2-modal">
       <div class="option__header">
         <div class="option__circle">
-          <div class="option__circle--active"></div>
+          <div class="option__circle option__circle--active" id="circle2"></div>
         </div>
         <div class="option__title">
           <h3>Bamboo Stand</h3>
@@ -181,7 +181,7 @@
         You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
         you’ll be added to a special Backer member list.
       </p>
-      <div class="option__footer">
+      <div class="option__footer" id="option2-footer">
         <p class="option__left">101 <span>left</span></p>
         <p>Enter your pledge</p>
         <form action="">
@@ -194,9 +194,11 @@
       </div>
     </div>
 
-    <div class="option modal-option">
+    <div class="option modal-option" id="option3-modal">
       <div class="option__header">
-        <div class="option__circle"></div>
+        <div class="option__circle">
+          <div class="option__circle" id="circle3"></div>
+        </div>
         <div class="option__title">
           <h3>Black Edition Stand</h3>
           <h4>Pledge $75 or more</h4>
@@ -206,7 +208,7 @@
         You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
         member list. Shipping is included.
       </p>
-      <div class="option__footer--disable">
+      <div class="option__footer option__footer--disable" id="option3-footer">
         <p class="option__left">64 <span>left</span></p>
         <p>Enter your pledge</p>
         <form action="">
